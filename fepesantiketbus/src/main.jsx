@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import "./index.css";
 import App from "./App.jsx";
 import Login from "./pages/Login.jsx";
+import SentEmail from "./pages/SentEmail.jsx";
 
 // Routes
 import Register from "./pages/register.jsx";
@@ -21,6 +22,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<ProfileUser />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/sent-email" element={<SentEmail />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>

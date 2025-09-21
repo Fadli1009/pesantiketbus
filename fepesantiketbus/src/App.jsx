@@ -5,6 +5,8 @@ import Logo from "./assets/images/loader/buztics.png";
 // import "./App.css";
 import { Button } from "@/components/ui/button";
 import { useSEO } from "./hooks/useSEO";
+import { LucideLayoutList } from "lucide-react";
+import Layouts from "./components/layouts/layout";
 
 function App() {
   useSEO({
@@ -19,29 +21,9 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="bg-green-100">
-      <Button>pencet saya</Button>
-      <div className="flex">
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <Layouts>
+      hallo
+    </Layouts>
   );
 }
 
