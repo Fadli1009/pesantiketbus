@@ -1,16 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { Button } from "@/components/ui/button"
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import Logo from "./assets/images/loader/buztics.png";
+import "./App.css";
+import { Button } from "@/components/ui/button";
+import { useSEO } from "./hooks/useSEO";
 
 function App() {
-  const [count, setCount] = useState(0)
+  useSEO({
+    title: "Buztics - Easy Bus Ticket BookingBuztics",
+    description: "Create your account and book your bus tickets with ease.",
+    favicon: "../assets/images/loader/buztics.png", // path dari public
+    image: "../assets/images/logo/buztics.png", // untuk share ke WhatsApp/Twitter
+    // url: "https://buztics.com/", // bisa dynamic
+    url: "http://localhost:5173/", // bisa dynamic
+  });
+
+  const [count, setCount] = useState(0);
 
   return (
-    <div className='bg-green-100'>
+    <div className="bg-green-100">
       <Button>pencet saya</Button>
-      <div className='flex'>
+      <div className="flex">
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -31,7 +42,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
