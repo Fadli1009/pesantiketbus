@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import Register from "./pages/register.jsx";
 import "./index.css";
 import App from "./App.jsx";
+import Login from "./pages/Login.jsx";
 
 const queryClient = new QueryClient();
 
@@ -15,6 +16,7 @@ createRoot(document.getElementById("root")).render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>
