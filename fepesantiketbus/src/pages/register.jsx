@@ -246,7 +246,7 @@ function Register() {
 
           <CardFooter className="flex justify-center text-sm text-gray-600">
             Sudah punya akun?{" "}
-            <Link to="/" className="ml-1 text-blue-600 hover:underline">
+            <Link to="/login" className="ml-1 text-blue-600 hover:underline">
               Masuk di sini
             </Link>
           </CardFooter>
